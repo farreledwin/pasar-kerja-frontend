@@ -46,7 +46,7 @@ const HeaderSearchBar = ({startSearchingJob,history}) => {
 
 	useEffect( () => {
 		async function fetchApi() {
-			const res = await axios.all([axios.get(process.env.REACT_APP_DEFAULT_API+"showjobcategory"),axios.get("https://dev.farizdotid.com/api/daerahindonesia/provinsi")]);
+			const res = await axios.all([axios.get(process.env.REACT_APP_DEFAULT_API+"/showjobcategory"),axios.get("https://dev.farizdotid.com/api/daerahindonesia/provinsi")]);
 		 setSearchData({city:res[1].data.provinsi,category: res[0].data.payload.data});
 		}
 		fetchApi();
