@@ -1,0 +1,33 @@
+.createworkservice{
+    &__text{
+        padding-left:10vw ;
+        padding-right: 10vw;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    &__btn{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+        background-color: #3183CD;
+        border: none;
+        color:white;
+        border-radius: 8px;
+        padding: 15px 100px;
+        font-weight: 600;
+        margin-top: 2em;
+        letter-spacing: 1px;
+        -webkit-box-shadow: 2px 10px 33px -8px rgba(158,158,158,1);
+        -moz-box-shadow: 2px 10px 33px -8px rgba(158,158,158,1);
+        box-shadow: 2px 10px 33px -8px rgba(158,158,158,1);
+    }
+
+}

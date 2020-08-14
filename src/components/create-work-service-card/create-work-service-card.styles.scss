@@ -1,0 +1,110 @@
+.createworkservicecard{
+    background-color: white;
+    width: 55vw;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-radius: 1em;
+
+    button {
+        border:none;
+        background-color: transparent;
+    }
+
+    &__img{
+        &-container{
+            width: 100%;
+            height: 300px;
+            background-color: rgba(111, 174, 232, 0.1);
+            border: 1px dashed #3183CD;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        &-btn{
+            border: none;
+            background-color: #3183CD;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            -webkit-box-shadow: 2px 10px 33px -8px rgba(158,158,158,1);
+            -moz-box-shadow: 2px 10px 33px -8px rgba(158,158,158,1);
+            box-shadow: 2px 10px 33px -8px rgba(158,158,158,1);
+
+            &-icon{
+                margin: auto 0;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+
+            }
+        }
+    }
+
+    &__field{
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
+        margin-top: 28px;
+
+        &-text{
+            margin: 0;
+            margin-bottom: 3px;
+        }
+
+        &-container{
+            padding: 20px;
+        }
+
+        &-link{
+            width: 100%;
+            
+
+            &:hover{
+                text-decoration: none;
+            }
+
+            &-container{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding-top: 20px;
+
+                .btn{
+                    color: #1A3E60;
+                    border-radius: .8em;
+                    padding: 5px 10px;  
+                    margin: 0px 3px;
+                    &-logo{
+                        margin: -8px;
+                    }
+                
+                    &-outline-info{
+                        border-color: #1A3E60;
+                        color: #1A3E60;
+                    }
+                }
+            }
+
+            &-txt{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                color: black;
+                font-weight: 400;
+            }
+
+            &-arrow{
+                width: 6.56px;
+                height: 13px;
+            }  
+        }
+    }
+
+    &__profile{
+        &-container{
+            padding: 20px;
+        }
+    }
+}
