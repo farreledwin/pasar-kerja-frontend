@@ -1,0 +1,86 @@
+.activejob {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+
+    .activejob__card {
+        .card {
+            .activejob__card__part-time-button {
+                display: inline;
+                position: absolute;
+                top: 2em;
+                right: 2em;
+                opacity: 80%;
+            }
+
+            .activejob__card__two-button {
+                display: flex;
+                position: absolute;
+                top: 17em;
+                left: 1em;
+
+                .activejob__card__first-button {
+                    padding-right: 2px;
+
+                    button[type=submit] {
+                        background-color: rgba(49, 131, 205, 0.65);
+                        border: none;
+                    }
+
+                }
+
+                .activejob__card__second-button {
+                    button[type=submit] {
+                        background-color: rgba(132, 44, 201, 0.65);
+                        border: none;
+                    }
+                }
+            }
+
+            .activejob__card__salary {
+                padding-top: 10px;
+                padding-left: 1em;
+
+                p {
+                    color: #2672E4;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+
+
+            }
+
+            .card-body {
+                .card-title {
+                    font-size: 2em;
+                    font-weight: 700;
+                }
+
+                .card-text {
+                    color: grey;
+                }
+            }
+
+            .activejob__location-and-time {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 20px;
+
+                .activejob__location {
+                    padding-left: 1.5em;
+                    padding-right: 1.5em;
+                    font-size: 0.8em;
+                    color: grey;
+                }
+            }
+
+            .carousel-indicators li {
+                display: none;
+            }
+        }
+    }
+}
+
+.br-15 {
+    border-radius: 15px 15px 0px 0px;
+}

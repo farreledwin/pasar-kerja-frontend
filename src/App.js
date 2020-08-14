@@ -7,6 +7,7 @@ import { isLoggedInOrNot } from '../src/redux/user/user.actions';
 import Footer from '../src/components/footer/footer.component';
 import {withRouter} from 'react-router-dom';
 import Header from './components/header/header.component';
+import JobList from './pages/job-list/job-list.component';
 
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
@@ -18,6 +19,7 @@ const App = ({ loginOrNot,location}) => {
 			{location.pathname === '/' || location.pathname == '/findworker' ? null : <Header/> }
 			<Switch>
 				<Route exact path="/" component={HomePage} />
+				<Route exact path="/joblist" component={JobList}/>
         </Switch>
 			<Footer/>
 		</div>

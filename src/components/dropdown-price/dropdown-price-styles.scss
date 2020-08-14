@@ -1,0 +1,95 @@
+.price-dropdown__section {
+    height: 220px;
+    background-color: white;
+    top: 10em;
+    left: 5em;
+    position: absolute;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+
+    .price-dropdown__content {
+
+        .price-dropdown__button {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 2em;
+
+            .price-dropdown__button--clearbtn {
+                a {
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+
+            .price-dropdown__button--savebtn {
+
+                input[type=submit] {
+                    background-color: #1A3E60;
+                    color: white;
+                    font-weight: 700;
+                    border: none;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-top: 0.2em;
+                    padding-bottom: 0.2em;
+                    border-radius: 10px;
+                }
+
+            }
+        }
+
+        .price-dropdown__price {
+
+            display: flex;
+
+            input[type=text] {
+                width: 8em;
+            }
+
+            .price-dropdown__price--minprice {
+                margin-right: 2em;
+                border: 2px solid #A7A7A7;
+                border-radius: 10px;
+                padding: 0.5em;
+
+                .price-dropdown__price--inputmin {
+                    input {
+                        border: none;
+                    }
+                }
+
+                .price-dropdown__price--textmin {
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .price-dropdown__price--maxprice {
+                border: 2px solid #A7A7A7;
+                padding: 0.5em;
+                border-radius: 10px;
+                border: 2px solid #A7A7A7;
+
+                .price-dropdown__price--inputmax {
+                    input {
+                        border: none;
+                    }
+
+                }
+
+                .price-dropdown__price--textmax {
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+}
