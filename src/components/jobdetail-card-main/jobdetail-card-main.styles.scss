@@ -1,0 +1,97 @@
+.jobdetail{
+
+    &--card-main{
+        background-color: white;
+        width: 60vw;
+        padding: 5em;
+        padding-bottom: 2em;
+        padding-top: 2em;
+        border-radius: 1em;
+
+        .basic-line{
+            margin: 25px 40px;
+            border: .8px solid #A7A7A7;
+        }
+        
+
+        &__title{
+            h2{
+                font-weight: bolder;
+            }
+            
+            &-container{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 0 0 25px;
+                margin: 25px 0 0  0;
+            }
+        }
+
+        &__rating{
+
+            &-container{
+                display:flex;
+                
+            }
+
+            &-active{
+                width: 20px;
+                height: 20px;
+                margin:5px;
+            }
+
+            &-passive{
+                width: 20px;
+                height: 20px;
+                margin:5px;
+            }
+        }
+
+        .btn{
+            color: #1A3E60;
+            border-radius: .8em;
+            padding: 5px 10px;  
+            &-logo{
+                margin: -8px;
+            }
+        
+            &-outline-info{
+                border-color: #1A3E60;
+                color: #1A3E60;
+            }
+        }
+
+        &__img{
+            width: 100%;
+            height: 300px;    
+            object-fit: cover;
+            border-radius: 1em;
+
+            &-container{
+               width: 100%;
+            }
+
+        }
+
+        &__description{
+
+            h3{
+                font-weight: bolder;
+            }
+            p{
+                color: #808080;
+            }
+
+            &-container{
+                padding: 0 0 0 25px;
+            }
+        }
+    }
+
+}
+
+.pad-5{
+    padding:0px 10px;
+}
+
+

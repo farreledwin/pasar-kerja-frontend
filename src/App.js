@@ -8,6 +8,7 @@ import Footer from '../src/components/footer/footer.component';
 import {withRouter} from 'react-router-dom';
 import Header from './components/header/header.component';
 import JobList from './pages/job-list/job-list.component';
+import JobDetail from './pages/job-detail/job-detail.component';
 
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
@@ -20,7 +21,8 @@ const App = ({ loginOrNot,location}) => {
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/joblist" component={JobList}/>
-        </Switch>
+				<Route exact path="/job-detail" component={JobDetail}/>
+		</Switch>
 			<Footer/>
 		</div>
 	);

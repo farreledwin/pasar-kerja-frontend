@@ -1,0 +1,84 @@
+.jobdetail-review{
+    padding: 0 6em;
+    width: 60vw;
+
+    &__title{
+
+        &-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h3{
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        &--rating{
+            display: flex;
+
+            &-active{
+                width: 20px;
+                height: 20px;
+                margin:3px;
+            }
+
+            &-passive{
+                width: 20px;
+                height: 20px;
+                margin:3px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+
+        &--link{
+            font-weight: 600;
+            color: #1A3E60;
+
+            &:hover{
+                text-decoration: none;
+                color: #1A3E60;
+            }
+        }
+    }
+
+    &__list{
+        margin-top: 35px;
+        display: flex;
+
+        &-container{
+
+        }
+
+        &-detail{
+            display:flex;
+
+            .mg-5{
+                margin-top: 5px;
+                margin-left: 10px;
+            }
+
+            &--img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50px;
+            }
+
+            &--name{
+                font-weight: 600;
+            }
+
+            &--date{
+                color: #808080;
+            }
+
+            &--desc{
+                margin-top: 10px;
+            }
+        }
+    }
+
+}
