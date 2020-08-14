@@ -1,0 +1,70 @@
+.paymentdetailtime{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 30vw;
+
+    &__title{
+        margin-bottom: 50px;
+        text-align: center;
+
+        h1{
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        h4{
+            color: #E33636;
+            font-weight: bold;
+        }
+    }
+
+    &__paymentcard{
+        justify-content: center;
+        margin: 0 20px;
+    }
+
+    
+    &__button{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &-container{
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        &--find{
+            background-color: white;
+            border: 1px solid #1A3E60;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1A3E60;
+            padding: 20px 40px;
+            margin: 0 10px;
+        }
+
+        &--check{
+            background-color: #1A3E60;
+            border: 1px solid #1A3E60;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            padding: 20px 18px;
+            margin: 0 10px;
+        }
+    }
+
+    &__footer{
+        justify-content: flex-start;
+
+        p{
+            color:  #808080;
+            font-weight: lighter;
+        }
+    }
+
+}

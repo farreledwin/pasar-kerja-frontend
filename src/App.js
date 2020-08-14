@@ -9,7 +9,8 @@ import {withRouter} from 'react-router-dom';
 import Header from './components/header/header.component';
 import JobList from './pages/job-list/job-list.component';
 import JobDetail from './pages/job-detail/job-detail.component';
-
+import PaymentDetail from './pages/payment-detail/payment-detail.component';
+import PaymentDetailTime from './pages/payment-detail-time/payment-detail-time.component';
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
 		loginOrNot();
@@ -22,6 +23,9 @@ const App = ({ loginOrNot,location}) => {
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/joblist" component={JobList}/>
 				<Route exact path="/job-detail" component={JobDetail}/>
+				<Route exact path="/job-detail/:jobId" component={JobDetail}/>
+				<Route exact path="/payment-detail" component={PaymentDetail}/>
+				<Route exact path="/payment-detail-time" component={PaymentDetailTime}/>
 		</Switch>
 			<Footer/>
 		</div>

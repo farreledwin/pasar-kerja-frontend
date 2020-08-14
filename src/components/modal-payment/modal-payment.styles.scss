@@ -1,0 +1,92 @@
+.modal-open {
+
+    .modal-font {
+        font-family: 'Montserrat';
+    }
+
+    .special-custom {
+            display: block;
+            position: relative;
+            font-size: 2em;
+            left: -1em;
+
+
+    }
+
+    .custom-padding-modal {
+        padding-left: 4em;
+
+
+    }
+
+    .custom-font {
+        font-size: 24px;
+    }
+
+    .custom-style {
+        span {
+            display: none;
+        }
+
+
+    }
+
+
+    .custom-content {
+        font-size: 20px;
+        padding-left: 2em;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 3em;
+        font-family: 'Montserrat';
+
+        p {
+            color: #1A3E60;
+        }
+    }
+
+    .bca-payment {
+        font-size: 20px;
+        padding-left: 2em;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 3em;
+
+        p {
+            margin: auto;
+        }
+    }
+
+    .payment-summary {
+        padding-left: 2em;
+
+        .price {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .change-justify {
+        justify-content: space-between;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        padding-left: 2em;
+
+        .flex-total {
+            display: flex;
+
+            p {
+                padding-right: 1em;
+                margin: auto;
+            }
+        }
+
+        .button-custom-background {
+            background-color: #1A3E60;
+            width: 10em;
+            border-radius: 10px;
+
+        }
+    }
+}

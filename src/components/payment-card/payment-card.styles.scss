@@ -1,0 +1,73 @@
+.paymentcard{
+    width: 100%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 65px 6px rgba(212,212,212,1);
+    -moz-box-shadow: 0px 0px 65px 6px rgba(212,212,212,1);
+    box-shadow: 0px 0px 65px 6px rgba(212,212,212,1);
+
+
+    &__type{
+        width:100%;
+        padding: 5px 10px;
+        background-color: white;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 65px 6px rgba(212,212,212,1);
+        -moz-box-shadow: 0px 0px 65px 6px rgba(212,212,212,1);
+        box-shadow: 0px 0px 65px 6px rgba(212,212,212,1);
+        display: flex;
+
+        &-logo{
+            width: 119.96px;
+            height: 80px;
+        }
+
+        &-text{
+            margin: auto 0;
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+
+    
+    &__detail{
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0 10px 0px;
+
+        .paymentcard__number{
+                &--text{
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                }
+
+                &--virtualacc{
+                    font-weight: 700;
+                }
+
+                &--copylink{
+                    color: #1A3E60;
+                    font-weight: 600;
+                }
+        }
+
+        .paymentcard__payment{
+            &--text{
+                font-weight: 400;
+                margin-bottom: 15px;
+            }
+
+            &--total{
+                font-weight: 700;
+            }
+
+            &--detaillink{
+                color: #1A3E60;
+                font-weight: 600;
+            }
+        }
+
+    }
+}
