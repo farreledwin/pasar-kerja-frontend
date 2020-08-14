@@ -1,0 +1,29 @@
+.sharecvcard{
+    background-color: white;
+    padding: 1.8em;
+    padding-top: 2em;
+    border-radius: 1em;
+    box-shadow: -1px 0px 56px -7px rgba(189,189,189,1);
+
+    &__title{
+        font-weight: bold;
+        
+        .blue{
+            color:#3183CD;
+        }
+    }
+
+    &__text{
+        font-size: 14px;
+    }
+
+
+    &__link{
+        padding: 5px 5px;
+
+        &-img{
+            margin-right: 10px;
+        }
+    }
+}
+

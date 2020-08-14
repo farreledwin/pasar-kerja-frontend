@@ -11,6 +11,7 @@ import JobList from './pages/job-list/job-list.component';
 import JobDetail from './pages/job-detail/job-detail.component';
 import PaymentDetail from './pages/payment-detail/payment-detail.component';
 import PaymentDetailTime from './pages/payment-detail-time/payment-detail-time.component';
+import ProfilePage from './pages/profile-page/profile-page.component';
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
 		loginOrNot();
@@ -26,6 +27,7 @@ const App = ({ loginOrNot,location}) => {
 				<Route exact path="/job-detail/:jobId" component={JobDetail}/>
 				<Route exact path="/payment-detail" component={PaymentDetail}/>
 				<Route exact path="/payment-detail-time" component={PaymentDetailTime}/>
+				<Route exact path="/profile" component={ProfilePage}/>
 		</Switch>
 			<Footer/>
 		</div>

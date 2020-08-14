@@ -1,0 +1,106 @@
+.profilecard{
+    background-color: #F8FBFF;
+    border-radius: 1em;
+
+    &__main-container{
+        padding: 50px;
+    }
+
+    &__img{
+        width:100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+
+
+    &__title{
+        display: flex;
+        margin: auto 0;
+        color: #1A3E60;
+
+        &-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &--name{
+            font-weight: bolder;
+        }
+
+        &-location{
+            display: flex;
+            margin: 10px 0 0 5px;
+
+            &--img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+    }
+
+    &__description{
+        
+        &-title{
+            color: #1A3E60;
+            font-weight: bolder;
+        }
+
+        &-text{
+            color: #808080;
+        }
+        &-container{
+            margin: 0 0 30px;
+        }
+    }
+
+    &__achievement{
+        margin: 20px 0;
+        h5{
+            color: #1A3E60;
+            font-weight: bolder;
+        }
+
+        &-list{
+            margin:20px 25px 10px 25px;
+        }
+
+        &-item{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-check{
+            width: 24px;
+            height: 24px;
+        }
+
+        &-name{
+            color: #1A3E60;
+            font-weight: bolder;
+        }
+    }
+
+    &__link{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #1A3E60;
+        font-size: 14px;
+        font-weight: bolder;
+        color: white;
+        padding: 20px 0px;
+        border-radius: 0 0 1em 1em;
+
+            &:hover{
+                text-decoration: none;
+                color: white;
+            }
+
+        &-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

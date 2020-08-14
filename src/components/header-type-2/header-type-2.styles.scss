@@ -1,0 +1,52 @@
+.header__logo {
+    display: flex;
+    padding-top: 0.5rem;
+
+    img {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .header__searchbar {
+        .header__searchbar__inputjob {
+            display: flex;
+
+            .background-change {
+                background-color: #1A3E60;
+
+                p {
+                    margin: 0;
+                    padding-bottom: 0.8em;
+                }
+            }
+
+            .form-group {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", 'FontAwesome';
+                padding: 0;
+
+
+
+                .padding-add {
+                    padding: 1.5em;
+                }
+
+                .search-btn {
+
+                    padding-left: 0.8em;
+                    padding-right: 0.8em;
+                    padding-top: 0.8em;
+                    color: white;
+
+                }
+
+
+
+                input[type=submit] {
+                    background-color: #3183cd;
+                    color: white;
+                }
+            }
+        }
+    }
+}

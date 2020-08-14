@@ -1,59 +1,73 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import './header.styles.scss';
-import DropDownLogin from '../../components/dropdown-login/dropdown-login.component';
-import DropDownRegister from '../form-master-register/form-master-register.component';
-
-const inlinePadding = {
-	paddingLeft: '20em'
-};
-
-const paddingRegisterLogin = {
-	width: '6em'
-};
-
-const changeColorText = {
-	color: '#1A3E60'
-};
-
-const Header = () => {
-	const [ statusDropDownLogin, setDropDownLogin ] = useState(false);
-	const [ statusDropDownRegister, setDropDownRegister ] = useState(false);
-
-	const loginDropDownStatus = () => {
-		setDropDownLogin(!statusDropDownLogin);
-		setDropDownRegister(false);
-	};
-
-	const registerDropDownStatus = () => {
-		setDropDownRegister(!statusDropDownRegister);
-		setDropDownLogin(false);
-	};
+import { setToogleDropDown, setToogleRegisterDropDown } from '../../redux/user/user.actions';
+import { selectUserDropDown, selectUserRegisterDropDown, selectUserData } from '../../redux/user/user.selectors';
+import DropDownLogin from '../dropdown-login/dropdown-login.component';
+import DropDownRegister from '../dropdown-register/dropdown-register.component';
+import OnOutsiceClick from 'react-outclick';
+import Cookies from 'js-cookie';
+import FormMasterRegister from '../form-master-register/form-master-register.component';
+import { withRouter } from 'react-router-dom';
+import HeaderType2 from '../header-type-2/header-type-2.component';
+const Header = ({ hidden, hiddenRegister, setToggleRegisterDropDown, setToogleDropDown, userData, location }) => {
+	console.log(location);
 	return (
-		<div className="header-section__menu">
-			<div className="header-section__menu--content">
-				<div className="header-section__menu--item">
-					<p>Find Worker</p>
-				</div>
-				<div className="header-section__menu--item">
-					<p style={changeColorText}>Be a worker</p>
-				</div>
-			</div>
-			<div className="header-section__menu--content" style={inlinePadding}>
-				<div className="header-section__menu--item" style={paddingRegisterLogin}>
-					<a onClick={loginDropDownStatus}>
-						<p>Log in</p>
-					</a>
-				</div>
-				{statusDropDownLogin === true ? <DropDownLogin /> : null}
-				<div className="header-section__menu--item register">
-					<a onClick={registerDropDownStatus}>
-						<p>Register</p>
-					</a>
-				</div>
-				{statusDropDownRegister === true ? <DropDownRegister /> : null}
+		<div className="header">
+			<HeaderType2 />
+			<div className="header__menu">
+				<ul className="header__menu-list">
+					<li>
+						<a href="#">Cari Kerja</a>
+					</li>
+					<li>
+						<a href="#">Pasang Iklan</a>
+					</li>
+					<li>
+						{userData.length !== 0 ? <a>Pesanan</a> : <a onClick={setToggleRegisterDropDown}>Daftar</a>}
+					</li>
+					{hiddenRegister === true ? <FormMasterRegister /> : null}
+					{userData.length !== 0 ? null : (
+						<li>
+							<a onClick={setToogleDropDown}>Masuk</a>
+						</li>
+					)}
+					{userData.length !== 0 ? (
+						<div>
+							<li>
+								<a>
+									Profil<span
+										className="dot"
+										style={{ backgroundImage: `url(${userData.user_image})` }}
+									/>
+								</a>
+							</li>
+						</div>
+					) : null}
+
+					{hidden === true ? (
+						<OnOutsiceClick onOutsideClick={() => setToogleDropDown()}>
+							<DropDownLogin />
+						</OnOutsiceClick>
+					) : null}
+				</ul>
 			</div>
 		</div>
 	);
 };
 
-export default Header;
+const mapStateToProps = createStructuredSelector({
+	hidden: selectUserDropDown,
+	hiddenRegister: selectUserRegisterDropDown,
+	userData: selectUserData
+});
+
+const mapDispatchToProps = (dispatch) => ({
+	setToogleDropDown: () => dispatch(setToogleDropDown()),
+	setToggleRegisterDropDown: () => dispatch(setToogleRegisterDropDown())
+});
+
+const showLocationWithRouter = withRouter(Header);
+
+export default connect(mapStateToProps, mapDispatchToProps)(showLocationWithRouter);

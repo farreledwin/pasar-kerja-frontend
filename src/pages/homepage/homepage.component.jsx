@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import LeftBanner from '../../components/left-banner/left-banner.component';
-import Header from '../../components/header/header.component';
+import Header from '../../components/new/header/header.component';
 import './homepage.styles.scss';
 import TextBannerRight from '../../components/text-banner-right/text-banner-right.component';
 import GalleryCategoryHome from '../../components/gallery-category-home/gallery-category-home.component';
