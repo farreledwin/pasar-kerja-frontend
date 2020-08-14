@@ -1,0 +1,54 @@
+.popular-job {
+    p {
+        font-size: 18px;
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+
+    .popular-job__section {
+        display: flex;
+
+        .popular-job__photo {
+            height: 226px;
+
+            span {
+                font-size: 18px;
+                color: white;
+                position: relative;
+                top: -7em;
+                left: 2em;
+                font-weight: 700;
+            }
+
+            img {
+                width: 4em;
+                height: 300px;
+                margin-right: 0.2em;
+            }
+
+            p {
+                font-size: 12px;
+                background-color: #1A3E60;
+                width: 83px;
+                color: white;
+                padding-left: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                position: relative;
+                top: -24em;
+                left: 1em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+
+        .popular-job__photo-item {
+            img {
+                width: 250px;
+            }
+        }
+    }
+}

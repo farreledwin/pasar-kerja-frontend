@@ -1,0 +1,53 @@
+.footer__section {
+    background: #EBEBEB;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2em;
+    font-family: 'Montserrat';
+    color: #1A3E60;
+
+    p {
+        margin: 0;
+    }
+
+    .footer__language {
+        padding-left: 1em;
+        padding-top: 1em;
+
+        select {
+            background-color: #F3F3F3;
+            padding: 0.3em;
+            padding-right: 0.3em;
+            padding-left: 0.3em;
+            border-radius: 10px;
+            padding-left: 0.5em;
+            padding-right: 2em;
+        }
+    }
+
+    .footer__follow {
+        padding-left: 1em;
+
+        .footer__follow--text {
+            padding-top: 1em;
+            padding-bottom: 0.5em;
+        }
+    }
+
+    .footer__follow--icon {
+        img {
+            background-color: white;
+            margin: 0.2em
+        }
+    }
+
+    .footer__category {
+        display: flex;
+        flex-wrap: wrap;
+
+        .footer__category--item {
+            flex: 1 0 50%;
+            padding-right: 1em;
+        }
+    }
+}

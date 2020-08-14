@@ -1,0 +1,51 @@
+.banner-image {
+    font-family: 'Montserrat';
+    color: #1A3E60;
+
+
+    .header-section__menu--content-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .banner-image__logo img {
+        width: 10em;
+        position: absolute;
+        top: 2em;
+        left: 8em;
+
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    .banner-image__image {
+        img {
+            width: 20em;
+            height: 50em;
+        }
+
+    }
+
+    .banner-image__text-and-button {
+        position: absolute;
+        top: 35em;
+        padding-left: 2em;
+
+        .banner-image__button {
+            button {
+                border: 2px solid #1A3E60;
+                padding: 0.5em;
+                padding-left: 2em;
+                padding-right: 2em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                color: #1A3E60;
+            }
+
+        }
+    }
+}

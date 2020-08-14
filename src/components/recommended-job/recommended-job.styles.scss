@@ -1,0 +1,54 @@
+.no-margin {
+	margin: 0;
+}
+.recommendation-job {
+	background-color: white;
+	z-index: 2;
+	position: absolute;
+	top: 4.5em;
+	right: 6em;
+	border: 2px solid gray;
+	padding-top: 2em;
+	padding-left: 0em;
+	width: 25em;
+	border-radius: 10px;
+	.recommendation-job__buttoncontract {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		width: 25em;
+		padding-left: 2em;
+		padding-right: 2em;
+		.btn.btn-outline-secondary {
+			width: 12em;
+			font-size: 0.8em;
+		}
+	}
+	.recommendation-job__circle-progress {
+		display: flex;
+		padding-left: 2em;
+		.recommendation-job__title-circle {
+			h5 {
+				font-size: 1rem;
+			}
+		}
+
+		.recommendation-job__circle {
+			padding: 0.5em;
+
+			h5 {
+				font-size: 1em;
+			}
+		}
+	}
+	.recommendation-job__button {
+		display: flex;
+		padding-left: 2em;
+
+		button[type=submit] {
+			border-radius: 5px;
+			margin: 0.5em;
+			width: 12em;
+		}
+	}
+}

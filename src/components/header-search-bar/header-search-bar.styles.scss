@@ -1,0 +1,68 @@
+.header__logo {
+    display: flex;
+
+
+    .header__logo-image {
+        padding-right: 1em;
+
+    }
+
+    .header__searchbar {
+        .header__searchbar__inputjob {
+            display: flex;
+
+            .background-header-button-change {
+                button {
+                    background-color: #1A3E60;
+                    height: 0.9em;
+                    position: absolute;
+                    border: none;
+                    width: 50px;
+                }
+
+                p {
+                    font-size: 20px;
+                    margin: 0;
+                    color: white;
+                }
+
+            }
+
+            .custom-width-autocomplete {
+                width: 220px;
+                height: calc(2em + 2rem + 2px);
+                margin: 0;
+
+                >div {
+                    height: calc(1em + 2em + 2px);
+                }
+            }
+
+            .form-group {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", 'FontAwesome';
+                padding: 0;
+
+
+
+                .padding-add {
+                    padding: 1.5em;
+                }
+
+                .search-btn {
+                    padding-left: 0.8em;
+                    padding-right: 0.8em;
+                    padding-top: 0.8em;
+                    color: white;
+
+                }
+
+
+
+                // input[type=submit] {
+                //     background-color: #3183cd;
+                //     color: white;
+                // }
+            }
+        }
+    }
+}

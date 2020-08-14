@@ -1,0 +1,50 @@
+.dropdown-menu__register {
+	background-color: white;
+	z-index: 2;
+	position: absolute;
+	top: 4.5em;
+	right: -4em;
+	border: 2px solid gray;
+	padding-top: 4em;
+	padding-left: 2em;
+	width: 25em;
+	border-radius: 10px;
+
+	.dropdown-menu__register__forminput__row {
+		display: flex;
+
+		.form-input {
+			padding-right: 0.5em;
+
+			input[type=text] {
+				width: 10em;
+				height: 2.5em;
+			}
+		}
+	}
+
+	.dropdown-menu__register__forminput__column {
+		#eye {
+			position: absolute;
+			top: 11.8em;
+			right: 3em;
+		}
+
+		.form-input {
+			input[type=email] {
+				width: 20.5em;
+				height: 2.5em;
+			}
+
+			input[type=password] {
+				width: 20.5em;
+				height: 2.5em;
+			}
+
+			button[type=submit] {
+				width: 27.4em;
+				border-radius: 10px;
+			}
+		}
+	}
+}

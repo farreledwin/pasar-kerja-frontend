@@ -1,0 +1,12 @@
+.recommendation-job__all-circle-content {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	.rounded-circle {
+		display: inline-block;
+		background-color: grey;
+		width: 20px;
+		height: 20px;
+		padding: 0.8em;
+	}
+}

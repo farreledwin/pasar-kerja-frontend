@@ -1,0 +1,40 @@
+.header-section__menu {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2em;
+    padding-bottom: 0;
+    font-family: 'Montserrat';
+    color: #1A3E60;
+
+    .header-section__menu--content {
+        display: flex;
+        color: black;
+
+        .register {
+            background-color: #1A3E60;
+            color: white;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            font-size: 15px;
+            width: 6em;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 2em;
+        }
+
+        p {
+            margin-left: 0.3em;
+            padding-top: 0.4em;
+            margin-top: -0.2em;
+            padding-left: 0.2em;
+        }
+    }
+
+    .header-section__menu--item {
+        width: 7em;
+
+
+    }
+}

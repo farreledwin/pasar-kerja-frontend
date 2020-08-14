@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/homepage.component';
 import { connect } from 'react-redux';
 import { isLoggedInOrNot } from '../src/redux/user/user.actions';
-import Footer from '../src/components/after/footer/footer.component';
+import Footer from '../src/components/footer/footer.component';
 import {withRouter} from 'react-router-dom';
 import Header from './components/header/header.component';
 
