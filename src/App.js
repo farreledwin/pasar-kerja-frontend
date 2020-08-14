@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import HomePage from './pages/homepage/homepage.component';
+import { connect } from 'react-redux';
+import { isLoggedInOrNot } from '../src/redux/user/user.actions';
+import Footer from '../src/components/after/footer/footer.component';
+import {withRouter} from 'react-router-dom';
+import Header from './components/header/header.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = ({ loginOrNot,location}) => {
+	useEffect(() => {
+		loginOrNot();
+	});
+	console.log(location.pathname);
+	return (
+		<div>
+			{location.pathname === '/' || location.pathname == '/findworker' ? null : <Header/> }
+			<Switch>
+				<Route exact path="/" component={HomePage} />
+        </Switch>
+			<Footer/>
+		</div>
+	);
+};
 
-export default App;
+const AppWithRouter = withRouter(App);
+const mapDispatchToProps = (dispatch) => ({
+	loginOrNot: () => dispatch(isLoggedInOrNot())
+});
+
+export default connect(null, mapDispatchToProps)(AppWithRouter);
