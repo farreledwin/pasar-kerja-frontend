@@ -1,0 +1,33 @@
+.orderlist{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    &__title{
+        margin: 0 0 50px;
+    }
+
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        & > *:not(:last-child){
+            margin-bottom: 2vw;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        & > * {
+            margin: 0 0 1.5vw 5vw;
+        }
+    }
+}
+

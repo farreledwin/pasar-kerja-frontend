@@ -15,6 +15,7 @@ import ProfilePage from './pages/profile-page/profile-page.component';
 import CreateProfile from './pages/create-profile/create-profile.component';
 import CreateWorkService from './pages/create-work-service/create-work-service.component';
 import WorkServiceList from './pages/work-service-list/work-service-list.component';
+import OrderList from './pages/order-list/order-list.component';
 
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
@@ -35,6 +36,7 @@ const App = ({ loginOrNot,location}) => {
 				<Route exact path="/create-profile" component={CreateProfile}/>
 				<Route exact path="/create-work-service" component={CreateWorkService}/>
 				<Route exact path="/work-service-list" component={WorkServiceList}/>
+				<Route exact path="/order-list" component={OrderList}/>
 		</Switch>
 			<Footer/>
 		</div>
