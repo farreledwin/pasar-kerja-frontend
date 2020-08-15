@@ -1,4 +1,6 @@
-import { userTypes } from './user.types';
+import {
+	userTypes
+} from './user.types';
 
 export const setToogleDropDown = () => ({
 	type: userTypes.TOGGLE_DROPDOWN
@@ -9,7 +11,7 @@ export const setToogleRegisterDropDown = () => ({
 });
 
 export const setRecommendedJobDropDown = () => ({
-	type: userTypes.TOOGnLE_SET_RECOMMENDED_JOB
+	type: userTypes.TOOGLE_SET_RECOMMENDED_JOB
 });
 
 export const setContractTypeJobDropDown = () => ({
@@ -60,4 +62,14 @@ export const startRegisterUser = (data) => ({
 export const successRegisterUser = (message) => ({
 	type: userTypes.SUCCESS_REGISTER_USER,
 	payload: message
+});
+
+export const startFetchProfile = (data) => ({
+	type: userTypes.START_FETCH_PROFILE,
+	payload: data
+});
+
+export const successFetchProfile = (data) => ({
+	type: userTypes.SUCCESS_FETCH_PROFILE,
+	payload: data
 });

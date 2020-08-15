@@ -13,7 +13,8 @@ import {
 	successLoginUser,
 	successDecryptDataUser,
 	userLogOut,
-	successRegisterUser
+	successRegisterUser,
+	successFetchProfile
 } from './user.actions';
 
 import getFetchInstance from '../utils/fetch-data';
@@ -109,6 +110,21 @@ export function* onRegisterStart() {
 	yield takeLatest(userTypes.START_REGISTER_USER, registerUser);
 }
 
+export function* successFetchProfileUser(res) {
+	const data = getDataFromResponse(res);
+	yield(put(successFetchProfile(data)));
+}
+
+export function* fetchProfileUser({payload: {email}}) {
+	const response = yield getFetchInstance().post('viewprofile', {email});
+
+	yield successFetchProfileUser(response);
+}
+
+export function* onFetchProfileStart() {
+	yield takeLatest(userTypes.START_FETCH_PROFILE, fetchProfileUser);
+}
+
 export function* userSagas() {
-	yield all([call(onLoginStart), call(onCheckUserLoggedIn), call(onRegisterStart)]);
+	yield all([call(onLoginStart), call(onCheckUserLoggedIn), call(onRegisterStart),call(onFetchProfileStart)]);
 }

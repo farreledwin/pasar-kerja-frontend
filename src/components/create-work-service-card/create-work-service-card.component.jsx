@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import './create-work-service-card.styles.scss';
 import Photo from '../../assets/after-workservicecard/photo.png';
 import Arrow from '../../assets/after-workservicecard/arrow.png';
@@ -12,7 +12,10 @@ import ServicePriceModal from '../modal/service-price-modal/service-price-modal.
 import ServiceDescriptionModal from '../modal/service-desc-modal/service-desc-modal.component';
 import {connect} from 'react-redux';
 import {startInsertJob} from '../../redux/joblist/joblist.action';
-
+import { selectUserData } from '../../redux/user/user.selectors';
+import { selectProfileUser } from '../../redux/user/user.selectors';
+import { startFetchProfile } from '../../redux/user/user.actions';
+import { createStructuredSelector } from 'reselect';
 const CreateWorkServiceCard = ({
 	getBase64,
 	handleClose,
@@ -24,7 +27,10 @@ const CreateWorkServiceCard = ({
 	handleChange,
 	handleSubmit,
 	data,
-	show
+	show,
+	user,
+	startFetchProfile,
+	profile
 }) => {
 	const {
 		serviceName,
@@ -36,6 +42,17 @@ const CreateWorkServiceCard = ({
 		serviceDescription,
 		job_image
 	} = data;
+
+	const { email } = user;
+
+	useEffect(
+		() => {
+			if (user !== null) {
+				startFetchProfile(email);
+			}
+		},
+		[ user ]
+	);
 	return (
 		<div className="createworkservicecard">
 			<div className="createworkservicecard__img-container" style={{ backgroundImage: `url(${data.job_image})` }}>
@@ -154,13 +171,16 @@ const CreateWorkServiceCard = ({
 
 			<div className="createworkservicecard__profile-container">
 				<h5>Your Profile</h5>
-				<div>
-					<NoProfileCard />
-				</div>
+				<div>{profile !== null ? <ProfileCard profile={profile} /> : null}</div>
 			</div>
 		</div>
 	);
 };
+
+const mapStateToProps = createStructuredSelector({
+	user: selectUserData,
+	profile: selectProfileUser
+});
 
 const mapDispatchToProps = (dispatch) => ({
 	startInsertJob: (
@@ -184,7 +204,8 @@ const mapDispatchToProps = (dispatch) => ({
 				serviceDescription,
 				job_image
 			})
-		)
+		),
+	startFetchProfile: (email) => dispatch(startFetchProfile({ email }))
 });
 
-export default connect(null, mapDispatchToProps)(CreateWorkServiceCard);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateWorkServiceCard);

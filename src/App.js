@@ -27,6 +27,7 @@ const App = ({ loginOrNot,location}) => {
 			{location.pathname === '/' || location.pathname == '/findworker' ? null : <Header/> }
 			<Switch>
 				<Route exact path="/" component={HomePage} />
+				<Route exact path="/findworker" component={HomePage} />
 				<Route exact path="/joblist" component={JobList}/>
 				<Route exact path="/job-detail" component={JobDetail}/>
 				<Route exact path="/job-detail/:jobId" component={JobDetail}/>

@@ -11,7 +11,8 @@ const INITIAL_STATE = {
 	isLoggedIn: false,
 	user: [],
 	error: null,
-	successMessage: null
+	successMessage: null,
+	profile: []
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -67,8 +68,13 @@ const userReducer = (state = INITIAL_STATE, action) => {
 				...state,
 				successMessage: action.payload
 			};
-		default:
-			return state;
+		case userTypes.SUCCESS_FETCH_PROFILE:
+			return {
+				...state,
+				profile: action.payload
+			}
+			default:
+				return state;
 	}
 };
 

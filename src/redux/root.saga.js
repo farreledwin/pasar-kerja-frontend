@@ -10,6 +10,8 @@ import { jobCategorySagas } from './jobcategory/jobcategory.saga';
 
 import {bookingSagas} from './booking/booking.saga';
 
+import {profileWorkerSaga} from './profile-worker/profile-worker.saga';
+
 export default function* rootSaga() {
-	yield all([ call(userSagas), call(typeContractSagas), call(jobListSagas),call(jobCategorySagas),call(bookingSagas) ]);
+	yield all([ call(userSagas), call(typeContractSagas), call(jobListSagas),call(jobCategorySagas),call(bookingSagas),call(profileWorkerSaga) ]);
 }
