@@ -16,6 +16,7 @@ import CreateProfile from './pages/create-profile/create-profile.component';
 import CreateWorkService from './pages/create-work-service/create-work-service.component';
 import WorkServiceList from './pages/work-service-list/work-service-list.component';
 import OrderList from './pages/order-list/order-list.component';
+import HeaderType3 from './components/header-type-3/header-type-3.component';
 
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
@@ -24,7 +25,7 @@ const App = ({ loginOrNot,location}) => {
 	console.log(location.pathname);
 	return (
 		<div>
-			{location.pathname === '/' || location.pathname == '/findworker' ? null : <Header/> }
+			{location.pathname === '/' || location.pathname == '/findworker' ? null : <HeaderType3/> }
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/findworker" component={HomePage} />

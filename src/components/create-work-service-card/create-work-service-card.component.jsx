@@ -16,6 +16,7 @@ import { selectUserData } from '../../redux/user/user.selectors';
 import { selectProfileUser } from '../../redux/user/user.selectors';
 import { startFetchProfile } from '../../redux/user/user.actions';
 import { createStructuredSelector } from 'reselect';
+import HeaderType3 from '../header-type-3/header-type-3.component';
 const CreateWorkServiceCard = ({
 	getBase64,
 	handleClose,
