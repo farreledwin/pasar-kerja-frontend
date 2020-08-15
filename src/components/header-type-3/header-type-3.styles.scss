@@ -5,10 +5,10 @@
     border-bottom: 1px solid #A7A7A7;
 
 
-	.header__menu {
+	&__menu {
         width: 100%;
 
-		.header__menu-list {
+		&-list {
             display: flex;
             justify-content: space-between;
             align-content: space-between;

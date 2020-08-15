@@ -26,7 +26,7 @@ const App = ({ loginOrNot,location}) => {
 	console.log(location.pathname);
 	return (
 		<div>
-			{location.pathname === '/' || location.pathname == '/findworker' ? null : <Header/> }
+			{location.pathname === '/' || location.pathname == '/findworker' ? null : <HeaderType3/> }
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/findworker" component={HomePage} />
