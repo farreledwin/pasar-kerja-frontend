@@ -5,7 +5,6 @@ import Ceklis from '../../assets/after-jobdetailpage/ceklis.png';
 
 
 const ProfileCard = (profile) => {
-	console.log(profile);
 	return (
 		<div className="profilecard">
                 {profile.profile.edu_training_data === undefined || profile.profile.gallery_certif === undefined || profile.profile.language_exp === undefined ? (
