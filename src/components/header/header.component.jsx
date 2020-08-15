@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import './header.styles.scss';
+import Logo from '../../assets/logo.png';
 import { setToogleDropDown, setToogleRegisterDropDown } from '../../redux/user/user.actions';
 import { selectUserDropDown, selectUserRegisterDropDown, selectUserData } from '../../redux/user/user.selectors';
 import DropDownLogin from '../dropdown-login/dropdown-login.component';
@@ -37,7 +38,7 @@ const Header = ({ hidden, hiddenRegister, setToggleRegisterDropDown, setToogleDr
 						<div>
 							<li>
 								<a>
-									Profile<span
+									Profil<span
 										className="dot"
 										style={{ backgroundImage: `url(${userData.user_image})` }}
 									/>

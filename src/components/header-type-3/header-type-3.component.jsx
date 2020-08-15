@@ -17,22 +17,22 @@ const HeaderType3 = () => {
 		setDropDownLogout(!statusDropDownLogout);
 	};
 	return (
-		<div className="header">
-			<div className="header__menu">
-					<div className="header__menu-list">
-							<div className="header__menu-list-left">
-								<img className="header__menu-list-img" src={Logo}></img>
-								<a href="/" className="header__menu-list-item">Find Worker</a>
-								<a href="/" className="header__menu-list-item">Be a Worker</a>
-								<a href="/" className="header__menu-list-item">Work orders</a>
+		<div className="headertype3">
+			<div className="headertype3__menu">
+					<div className="headertype3__menu-list">
+							<div className="headertype3__menu-list-left">
+								<img className="headertype3__menu-list-img" src={Logo}></img>
+								<a href="/" className="headertype3__menu-list-item">Find Worker</a>
+								<a href="/" className="headertype3__menu-list-item">Be a Worker</a>
+								<a href="/" className="headertype3__menu-list-item">Work orders</a>
 							</div>
 
-							<div className="header__menu-list-right">
+							<div className="headertype3__menu-list-right">
 								<div>
-									<a href="/" className="header__menu-list-item">Profile</a>
-									<img className="header__menu-list-right-img" src={CoffeeFill}></img>
+									<a href="/" className="headertype3__menu-list-item">Profile</a>
+									<img className="headertype3__menu-list-right-img" src={CoffeeFill}></img>
 								</div>
-								<button className="header__menu-list-btn" onClick={logoutDropDownStatus}><img src={MenuButton}></img></button>
+								<button className="headertype3__menu-list-btn" onClick={logoutDropDownStatus}><img src={MenuButton}></img></button>
 								{statusDropDownLogout === true ? <DropDownLogout /> : null}
 							</div>
 					</div>
