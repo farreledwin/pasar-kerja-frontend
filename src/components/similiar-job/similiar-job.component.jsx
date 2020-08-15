@@ -10,7 +10,7 @@ class SimiliarJob extends React.Component {
     render(){
         return (
             <div className="similiar-job">
-                <h5>Pekerjaan Yang Mirip</h5>
+                <h5>Similiar works</h5>
                     <div className="similiar-job__list">
                         <JobCard />
                         <JobCard />

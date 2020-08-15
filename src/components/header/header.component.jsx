@@ -37,7 +37,7 @@ const Header = ({ hidden, hiddenRegister, setToggleRegisterDropDown, setToogleDr
 						<div>
 							<li>
 								<a>
-									Profil<span
+									Profile<span
 										className="dot"
 										style={{ backgroundImage: `url(${userData.user_image})` }}
 									/>

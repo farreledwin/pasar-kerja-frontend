@@ -12,22 +12,22 @@ class ShareCvCard extends React.Component {
     render(){
         return (
         <div className="sharecvcard">
-                <h3 className="sharecvcard__title">Bagikan CV dari <span className="blue">PasarKerja</span></h3>
+                <h3 className="sharecvcard__title">Share your cv to <span className="blue">PasarKerja</span></h3>
                 <p className="sharecvcard__text">Bagikan CV anda. detail kontak anda akan di masukkan kedalam CV PasarKerja saat anda bagikan.</p>
                 <div className="sharecvcard__link-container">
                     <div className="sharecvcard__link">
                         <img src ={Email} className="sharecvcard__link-img"></img>
-                        <a className="sharecvcard__link-text" href="">Kirim via Email</a>
+                        <a className="sharecvcard__link-text" href="">Send via Email</a>
                     </div>
                 <hr></hr>
                     <div className="sharecvcard__link">
                         <img src ={Copy} className="sharecvcard__link-img"></img>
-                        <a className="sharecvcard__link-text" href="">Copy dan bagikan link</a>
+                        <a className="sharecvcard__link-text" href="">Copy & Share link</a>
                     </div>
                 <hr></hr>
                     <div className="sharecvcard__link">
                         <img src ={Cloud} className="sharecvcard__link-img"></img>
-                        <a className="sharecvcard__link-text" href="">Unduh PDF</a>
+                        <a className="sharecvcard__link-text" href="">Upload PDF</a>
                     </div>
                 </div>
 
