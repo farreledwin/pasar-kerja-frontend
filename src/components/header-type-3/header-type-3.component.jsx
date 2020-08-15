@@ -4,17 +4,18 @@ import { createStructuredSelector } from 'reselect';
 import './header-type-3.styles.scss';
 import { setToogleDropDown, setToogleRegisterDropDown } from '../../redux/user/user.actions';
 import { selectUserDropDown, selectUserRegisterDropDown, selectUserData } from '../../redux/user/user.selectors';
-import DropDownLogin from '../dropdown-login/dropdown-login.component';
-import OnOutsiceClick from 'react-outclick';
-import FormMasterRegister from '../form-master-register/form-master-register.component';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo-mini-transparent.png';
 import MenuButton from '../../assets/menu-button.png';
 import CoffeeFill from '../../assets/coffee-fill.jpg';
+import DropDownLogout from '../dropdown-logout/dropdown-logout.component';
 
-const HeaderType3 = ({ hidden, hiddenRegister, setToggleRegisterDropDown, setToogleDropDown, userData, location }) => {
-	console.log(location);
+const HeaderType3 = () => {
+	const [ statusDropDownLogout, setDropDownLogout ] = useState(false);
+	const logoutDropDownStatus = () => {
+		setDropDownLogout(!statusDropDownLogout);
+	};
 	return (
 		<div className="header">
 			<div className="header__menu">
@@ -31,7 +32,8 @@ const HeaderType3 = ({ hidden, hiddenRegister, setToggleRegisterDropDown, setToo
 									<a href="/" className="header__menu-list-item">Profile</a>
 									<img className="header__menu-list-right-img" src={CoffeeFill}></img>
 								</div>
-								<button className="header__menu-list-btn"><img src={MenuButton}></img></button>
+								<button className="header__menu-list-btn" onClick={logoutDropDownStatus}><img src={MenuButton}></img></button>
+								{statusDropDownLogout === true ? <DropDownLogout /> : null}
 							</div>
 					</div>
 			</div>
