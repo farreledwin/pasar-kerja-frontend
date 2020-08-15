@@ -3,14 +3,20 @@ import './order-card.styles.scss';
 import CoffeeFill from '../../assets/coffee-fill.jpg';
 import CheffHat from '../../assets/after-jobdetailpage/cheff-hat.png';
 import RatingActive from '../../assets/after-jobdetailpage/rating-active.png';
+import RatingPassive from '../../assets/after-jobdetailpage/rating-passive.png';
 
 const OrderCard = ({ data }) => {
-	console.log(data);
 	return (
 		<div>
 			<div className="ordercard">
 				<div className="ordercard__status">
-					<h5>{data.payment_status}</h5>
+					{data.status_order === 2 ? (
+						<h5>Accepted</h5>
+					) : data.status_order === 3 ? (
+						<h5>Declined</h5>
+					) : (
+						<h5>New Order</h5>
+					)}
 				</div>
 
 				<div className="ordercard__desc">

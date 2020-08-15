@@ -3,6 +3,8 @@
     background-color: #f8f8f8;
 }
 
+
+
 // BUTTON //
 .buttonContainer {
     margin: 0 155px;
@@ -95,6 +97,7 @@
 .job-list-container {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 
     .activejob {
         padding-left: 0vw;

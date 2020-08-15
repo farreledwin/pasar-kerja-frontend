@@ -4,7 +4,8 @@ import {
 
 const INITIAL_STATE = {
 	customerBooking: null,
-	allworkorder: []
+	allworkorder: [],
+	messageStatus: ''
 };
 
 const BookingReducer = (state = INITIAL_STATE, action) => {
@@ -18,6 +19,11 @@ const BookingReducer = (state = INITIAL_STATE, action) => {
 			return {
 				...state,
 				allworkorder: action.payload
+			}
+		case BookingTypes.SUCCESS_CHANGE_STATUS_WORKORDER:
+			return {
+				...state,
+				messageStatus: action.payload
 			}
 			default:
 				return state;

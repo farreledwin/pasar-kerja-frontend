@@ -5,7 +5,7 @@ import ActiveJobDetailCompany from '../../components/active-job-detailcompany/ac
 import { connect } from 'react-redux';
 import { startFetchJobList } from '../../redux/joblist/joblist.action';
 import { createStructuredSelector } from 'reselect';
-import { selectAllDataJobList,selectSearchData } from '../../redux/joblist/joblist.selectors';
+import { selectAllDataJobList, selectSearchData } from '../../redux/joblist/joblist.selectors';
 import { extendMoment } from 'moment-range';
 import moment from 'moment';
 import DateRangePicker from 'react-daterange-picker';
@@ -14,7 +14,7 @@ import DropDownPrice from '../../components/dropdown-price/dropdown-price.compon
 import SortDropDown from '../../components/sort-dropdown/sort-dropdown.component';
 import LoadingScreen from 'react-loading-screen';
 import logoMiniTransparent from '../../assets/logo-mini-transparent.png';
-const JobList = ({ startFetchJobList, datajob,datasearch }) => {
+const JobList = ({ startFetchJobList, datajob, datasearch }) => {
 	const [ buttonValue, setButtonValue ] = useState({ value: '' });
 	const { value } = buttonValue;
 	const [ dates, setDates ] = useState(null);
@@ -66,7 +66,6 @@ const JobList = ({ startFetchJobList, datajob,datasearch }) => {
 		() => {
 			if (dates === null) {
 				startFetchJobList(null, null, start_price, end_price, sort);
-				
 			} else {
 				startFetchJobList(
 					moment(dates.start._d).format('YYYY-MM-DD'),
@@ -84,58 +83,63 @@ const JobList = ({ startFetchJobList, datajob,datasearch }) => {
 	// };
 	return (
 		<div>
-{datajob.length === 0 ? <LoadingScreen
-    loading={true}
-    bgColor='#f1f1f1'
-    spinnerColor='#9ee5f8'
-    textColor='#676767'
-    logoSrc={logoMiniTransparent}
-    text='Loading...Please Wait!'
-  /> : <div className="content-container">
-  <div className="buttonContainer">
-	  <Form.Group>
-		  <button
-			  type="button"
-			  name="pricerange"
-			  className="btn btn-outline-secondary btn-nonActive btn-newStyle"
-			  onClick={isOpenPriceStatus}
-			  value="Price"
-		  >
-			  {price.start_price !== '' && price.end_price !== '' ? (
-				  price.start_price + '-' + price.end_price
-			  ) : (
-				  'Price'
-			  )}
-		  </button>
-		  {isOpenPrice === true ? (
-			  <DropDownPrice onChange={onChangePrice} isOpen={isOpenPriceStatus} value={price} />
-		  ) : null}
-	  </Form.Group>
-	  <button
-		  type="button"
-		  name="startnow"
-		  className="btn btn-outline-secondary btn-nonActive btn-newStyle"
-		  onClick={isOpenDateStatus}
-		  value="Date"
-	  >
-		  {dates !== null ? (
-			  moment(dates.start._d).format('YYYY-MM-DD') + '-' + moment(dates.end._d).format('YYYY-MM-DD')
-		  ) : (
-			  'Date'
-		  )}
-	  </button>
-	  {isOpenDate === true ? <DateRangePicker onSelect={onSelect} value={dates} /> : null}
-	  <button
-		  type="button"
-		  name="startnow"
-		  className="btn btn-outline-secondary btn-nonActive btn-newStyle"
-		  value="Sort"
-		  onClick={isOpenSortStatus}
-	  >
-		  {sort !== null ? sort : 'Sort'}
-	  </button>
-	  {isOpenSort !== false ? <SortDropDown onChange={onChangeSort} /> : null}
-	  {/* <button type="button" name="startnow" className="btn btn-outline-secondary btn-nonActive" onClick={handleButtonChangeValue} value="mulai_sekarang">
+			{datajob.length === 0 ? (
+				<LoadingScreen
+					loading={true}
+					bgColor="#f1f1f1"
+					spinnerColor="#9ee5f8"
+					textColor="#676767"
+					logoSrc={logoMiniTransparent}
+					text="Loading...Please Wait!"
+				/>
+			) : (
+				<div className="content-container">
+					<div className="buttonContainer">
+						<Form.Group>
+							<button
+								type="button"
+								name="pricerange"
+								className="btn btn-outline-secondary btn-nonActive btn-newStyle"
+								onClick={isOpenPriceStatus}
+								value="Price"
+							>
+								{price.start_price !== '' && price.end_price !== '' ? (
+									price.start_price + '-' + price.end_price
+								) : (
+									'Price'
+								)}
+							</button>
+							{isOpenPrice === true ? (
+								<DropDownPrice onChange={onChangePrice} isOpen={isOpenPriceStatus} value={price} />
+							) : null}
+						</Form.Group>
+						<button
+							type="button"
+							name="startnow"
+							className="btn btn-outline-secondary btn-nonActive btn-newStyle"
+							onClick={isOpenDateStatus}
+							value="Date"
+						>
+							{dates !== null ? (
+								moment(dates.start._d).format('YYYY-MM-DD') +
+								'-' +
+								moment(dates.end._d).format('YYYY-MM-DD')
+							) : (
+								'Date'
+							)}
+						</button>
+						{isOpenDate === true ? <DateRangePicker onSelect={onSelect} value={dates} /> : null}
+						<button
+							type="button"
+							name="startnow"
+							className="btn btn-outline-secondary btn-nonActive btn-newStyle"
+							value="Sort"
+							onClick={isOpenSortStatus}
+						>
+							{sort !== null ? sort : 'Sort'}
+						</button>
+						{isOpenSort !== false ? <SortDropDown onChange={onChangeSort} /> : null}
+						{/* <button type="button" name="startnow" className="btn btn-outline-secondary btn-nonActive" onClick={handleButtonChangeValue} value="mulai_sekarang">
 			  <svg
 				  className="btn-svg"
 				  width="15"
@@ -163,19 +167,27 @@ const JobList = ({ startFetchJobList, datajob,datasearch }) => {
 			  {' '}
 			  Rekomendasi
 		  </button> */}
-  </div>
-  <hr className="hr-medium" />
-  <div className="job-container">
-	  <h1 className="job-header">Services in Jakarta</h1>
+					</div>
+					<hr className="hr-medium" />
+					<div className="job-container">
+						<h1 className="job-header">Pekerjaan di Jakarta</h1>
 
-	  <div className="job-list-container">
-		  {datasearch !== null ? datajob.filter((item) => item.job_category === datasearch.categoryInput || item.job_city === datasearch.cityInput).map((job) => <ActiveJobDetailCompany key={job.id} job={job}/>) : datajob.map((job) => <ActiveJobDetailCompany key={job.id} job={job} />) }
-		  
-	  </div>
-  </div>
-</div>}
-
-		
+						<div className="job-list-container">
+							{datasearch !== null ? (
+								datajob
+									.filter(
+										(item) =>
+											item.job_category === datasearch.categoryInput ||
+											item.job_city === datasearch.cityInput
+									)
+									.map((job) => <ActiveJobDetailCompany key={job.id} job={job} />)
+							) : (
+								datajob.map((job) => <ActiveJobDetailCompany key={job.id} job={job} />)
+							)}
+						</div>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 };

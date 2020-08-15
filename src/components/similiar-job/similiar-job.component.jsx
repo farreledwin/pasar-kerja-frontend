@@ -12,9 +12,9 @@ class SimiliarJob extends React.Component {
             <div className="similiar-job">
                 <h5>Similiar works</h5>
                     <div className="similiar-job__list">
+                        {/* <JobCard />
                         <JobCard />
-                        <JobCard />
-                        <JobCard />
+                        <JobCard /> */}
                     </div>
             </div>
         );

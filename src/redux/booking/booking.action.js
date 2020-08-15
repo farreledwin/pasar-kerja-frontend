@@ -21,3 +21,13 @@ export const successFetchWorkOrder = (data) => ({
 	type: BookingTypes.SUCCESS_FETCH_ALL_WORKORDER,
 	payload: data
 })
+
+export const startChangeStatusWorkOrder = (data) => ({
+	type: BookingTypes.START_CHANGE_STATUS_WORKORDER,
+	payload: data
+});
+
+export const successChangeStatusWorkOrder = (data) => ({
+	type: BookingTypes.SUCCESS_CHANGE_STATUS_WORKORDER,
+	payload: data
+});
