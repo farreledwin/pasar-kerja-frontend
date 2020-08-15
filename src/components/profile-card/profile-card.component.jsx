@@ -3,8 +3,8 @@ import './profile-card.styles.scss';
 import LocationLogo from '../../assets/after-jobdetailpage/location_icon.png';
 import Ceklis from '../../assets/after-jobdetailpage/ceklis.png';
 
-
 const ProfileCard = (profile) => {
+	console.log(profile);
 	return (
 		<div className="profilecard">
                 {profile.profile.edu_training_data === undefined || profile.profile.gallery_certif === undefined || profile.profile.language_exp === undefined ? (
@@ -63,7 +63,7 @@ const ProfileCard = (profile) => {
 								<div className="profilecard__achievement-item">
 									<h6 className="profilecard__achievement-name">{item.description}</h6>
 
-									<p className="profilecard__achievement-date">
+									<p className="profilecard__achievment-date">
 										{item.startYear} - {item.endYear}
 									</p>
 								</div>
