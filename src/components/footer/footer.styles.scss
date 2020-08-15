@@ -50,4 +50,12 @@
             padding-right: 1em;
         }
     }
+
+}
+.jadi-pekerja{
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }

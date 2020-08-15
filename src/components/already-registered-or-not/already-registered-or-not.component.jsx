@@ -5,11 +5,11 @@ const AlreadyRegisteredOrNot = ({ type }) => (
 	<div className="dropdown-menu__registered-or-not">
 		{type === 'register' ? (
 			<p>
-				<strong>Belum punya akun?</strong> <a href="#">Daftar</a>
+				<strong>Not registered yet?</strong> <a href="#">Register</a>
 			</p>
 		) : (
 			<p>
-				<strong>Sudah punya akun?</strong> <a href="#">Login</a>
+				<strong>Already have an account</strong> <a href="#">Login</a>
 			</p>
 		)}
 	</div>

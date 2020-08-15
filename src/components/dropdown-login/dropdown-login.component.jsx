@@ -37,7 +37,7 @@ const DropDownLogin = ({ startLoginUser }) => {
 					<FormInput type="submit" name="loginbtn" value="LOGIN" />
 				</div>
 			</form>
-			<div className="dropdown-menu__seperator">&nbsp;atau&nbsp;</div>
+			<div className="dropdown-menu__seperator">&nbsp;Or&nbsp;</div>
 			<div className="dropdown-menu__googlefbbtn">
 				<FormInput type="submit" name="logingoogle" value="LOGIN WITH GOOGLE" />
 				<FormInput type="submit" name="loginfacebook" value="LOGIN WITH FACEBOOK" />

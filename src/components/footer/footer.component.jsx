@@ -27,7 +27,7 @@ const Footer = () => (
 				</div>
 				<div className="footer__follow">
 					<div className="footer__follow--text">
-						<p>ikuti kita di</p>
+						<p>iFollow us on</p>
 					</div>
 					<div className="footer__follow--icon">
 						<img src={TwitterBlack} />
@@ -37,56 +37,56 @@ const Footer = () => (
 				</div>
 			</div>
 			<div className="col-sm-4">
-				<p style={footerTitle}>Kategori</p>
+				<p style={footerTitle}>Category</p>
 				<div className="footer__category">
 					<div className="footer__category--item">
-						<p>Kecantikan</p>
+						<a className="footer__category-link">Beauty</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Koki</p>
+						<a className="footer__category-link">Food & Beverages</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Perawat</p>
+						<a className="footer__category-link">Nursing</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Konstruksi</p>
+						<a className="footer__category-link">Construction</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Keamanan</p>
+						<a className="footer__category-link">Security</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Pelayan</p>
+						<a className="footer__category-link">Waiter & Hospitality</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Retail</p>
+						<a className="footer__category-link">Retail Serices</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Edukasi</p>
+						<a className="footer__category-link">Education</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Fashion</p>
+						<a className="footer__category-link">Fashion</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Customer Support</p>
+						<a className="footer__category-link">Customer Support</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Kebersihan</p>
+						<a className="footer__category-link">Cleaning & Sanitary</a>
 					</div>
 					<div className="footer__category--item">
-						<p>Acara</p>
+						<a className="footer__category-link">Events & Volunteering</a>
 					</div>
 				</div>
 			</div>
 			<div className="col-sm-2">
 				<div className="jadi-pekerja-pasarkerja__section">
 					<div className="jadi-pekerja__title">
-						<p style={footerTitle}>Jadi Pekerja</p>
+						<p style={footerTitle}>Be a worker</p>
 					</div>
 					<div className="jadi-pekerja__content">
-						<p>Lorem</p>
-						<p>Lorem</p>
-						<p>Lorem</p>
-						<p>Lorem</p>
+						<a className="footer__category-link">FAQ</a>
+						<a className="footer__category-link">Worker help center</a>
+						<a className="footer__category-link">Terms & Conditions</a>
+						<a className="footer__category-link">Privacy Policy</a>
 					</div>
 				</div>
 			</div>
@@ -96,7 +96,11 @@ const Footer = () => (
 						<p style={footerTitle}>Pasar Kerja</p>
 					</div>
 					<div className="jadi-pekerja__content">
-						<p>Help Center</p>
+						<a className="footer__category-link">About us</a>
+						<a className="footer__category-link">Contact us</a>	
+						<a className="footer__category-link">Services us</a>
+						<a className="footer__category-link">Careers us</a>
+						<a className="footer__category-link">Media Centre</a>
 					</div>
 				</div>
 			</div>

@@ -166,7 +166,7 @@ const JobList = ({ startFetchJobList, datajob,datasearch }) => {
   </div>
   <hr className="hr-medium" />
   <div className="job-container">
-	  <h1 className="job-header">Pekerjaan di Jakarta</h1>
+	  <h1 className="job-header">Services in Jakarta</h1>
 
 	  <div className="job-list-container">
 		  {datasearch !== null ? datajob.filter((item) => item.job_category === datasearch.categoryInput || item.job_city === datasearch.cityInput).map((job) => <ActiveJobDetailCompany key={job.id} job={job}/>) : datajob.map((job) => <ActiveJobDetailCompany key={job.id} job={job} />) }
