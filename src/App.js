@@ -14,6 +14,7 @@ import PaymentDetailTime from './pages/payment-detail-time/payment-detail-time.c
 import ProfilePage from './pages/profile-page/profile-page.component';
 import CreateProfile from './pages/create-profile/create-profile.component';
 import CreateWorkService from './pages/create-work-service/create-work-service.component';
+import WorkServiceList from './pages/work-service-list/work-service-list.component';
 
 const App = ({ loginOrNot,location}) => {
 	useEffect(() => {
@@ -33,6 +34,7 @@ const App = ({ loginOrNot,location}) => {
 				<Route exact path="/profile" component={ProfilePage}/>
 				<Route exact path="/create-profile" component={CreateProfile}/>
 				<Route exact path="/create-work-service" component={CreateWorkService}/>
+				<Route exact path="/work-service-list" component={WorkServiceList}/>
 		</Switch>
 			<Footer/>
 		</div>

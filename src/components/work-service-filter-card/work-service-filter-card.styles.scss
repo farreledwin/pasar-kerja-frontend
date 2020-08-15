@@ -1,0 +1,46 @@
+.workservicefiltercard{
+    background-color: white;
+    width: 25vw;
+    padding: 1.8em;
+    padding-top: 2em;
+    margin-top: 2em;
+    border-radius: 1em;
+    box-shadow: -1px 0px 56px -7px rgba(189,189,189,1);
+
+    h6{
+        padding: 0 25px;
+    }
+
+    &__button{
+        background-color: white;
+        //background-color: #C8D1D9;
+        border: none;
+        text-align: left;
+        padding: 15px 25px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: bolder;
+
+        &:active{
+            background-color: #C8D1D9;
+            color: #1A3E60;
+        }
+
+        &--active{
+            background-color: #C8D1D9;
+            color: #1A3E60;
+            //keperluan styling doang
+        }
+
+        &:hover{
+            background-color: #C8D1D9;
+            color: #1A3E60;
+        }
+        
+
+        &-container{
+         display: flex;
+         flex-direction: column;
+        }
+    }
+}
