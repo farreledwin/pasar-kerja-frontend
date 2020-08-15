@@ -13,31 +13,19 @@ import ServiceDescriptionModal from '../modal/service-desc-modal/service-desc-mo
 import {connect} from 'react-redux';
 import {startInsertJob} from '../../redux/joblist/joblist.action';
 
-const CreateWorkServiceCard = ({startInsertJob}) => {
-	const [ show, setShow ] = useState({ service: false, workhours: false, workcategory: false, price: false,description: false });
-	const [ data, setData ] = useState({
-		serviceName: '',
-		start_time_range: '',
-		finish_time_range: '',
-		workcategory: 'koki',
-		salary: '',
-		discount: '',
-		serviceDescription: '',
-		job_image: ''
-	});
-
-	const getBase64 = (e) => {
-		var file = e.target.files[0]
-		let reader = new FileReader()
-		reader.readAsDataURL(file)
-		reader.onload = () => {
-		  setData({...data,job_image: reader.result})
-		  console.log(data);
-		};
-		reader.onerror = function (error) {
-		  console.log('Error: ', error);
-		}
-	  }
+const CreateWorkServiceCard = ({
+	getBase64,
+	handleClose,
+	handleServiceShow,
+	handleWorkHoursShow,
+	handleWorkCategoryShow,
+	handlePriceShow,
+	handleDescriptionShow,
+	handleChange,
+	handleSubmit,
+	data,
+	show
+}) => {
 	const {
 		serviceName,
 		start_time_range,
@@ -48,47 +36,11 @@ const CreateWorkServiceCard = ({startInsertJob}) => {
 		serviceDescription,
 		job_image
 	} = data;
-
-	const handleClose = () => {
-		setShow(false);
-	};
-	const handleServiceShow = () => {
-		setShow({ ...show, service: true });
-	};
-	const handleWorkHoursShow = () => {
-		setShow({ ...show, workhours: true });
-	};
-	const handleWorkCategoryShow = () => {
-		setShow({ ...show, workcategory: true });
-	};
-	const handlePriceShow = () => {
-		setShow({ ...show, price: true });
-	};
-	const handleDescriptionShow = () => {
-		setShow({ ...show, description: true });
-	};
-
-	const handleChange = (event) => {
-		setData({ ...data, [event.target.name]: event.target.value });
-		console.log(data);
-	};
-
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		startInsertJob(serviceName,
-			start_time_range,
-			finish_time_range,
-			workcategory,
-			salary,
-			discount,
-			serviceDescription,
-			job_image);
-	}
 	return (
 		<div className="createworkservicecard">
-			<div className="createworkservicecard__img-container" style={{backgroundImage: `url(${data.job_image})`}}>
-				<input type="file" onChange={getBase64} className="createworkservicecard__img-btn"/>
-					{/* <img className="createworkservicecard__img-btn-icon" src={Photo} />Upload Photo */}
+			<div className="createworkservicecard__img-container" style={{ backgroundImage: `url(${data.job_image})` }}>
+				<input type="file" onChange={getBase64} className="createworkservicecard__img-btn" />
+				{/* <img className="createworkservicecard__img-btn-icon" src={Photo} />Upload Photo */}
 			</div>
 
 			<div className="createworkservicecard__field-container">
@@ -100,7 +52,7 @@ const CreateWorkServiceCard = ({startInsertJob}) => {
 						className="createworkservicecard__field-link"
 					>
 						<div className="createworkservicecard__field-link-container">
-							<p className="createworkservicecard__field-link-txt">{serviceName}</p>
+							<p className="createworkservicecard__field-link-txt">{data.serviceName}</p>
 							<img className="createworkservicecard__field-link-arrow" src={Arrow} alt="" />
 						</div>
 					</a>
@@ -140,7 +92,9 @@ const CreateWorkServiceCard = ({startInsertJob}) => {
 						className="createworkservicecard__field-link"
 					>
 						<div className="createworkservicecard__field-link-container">
-							<p className="createworkservicecard__field-link-txt">{start_time_range} : {finish_time_range}</p>
+							<p className="createworkservicecard__field-link-txt">
+								{data.start_time_range} : {data.finish_time_range}
+							</p>
 							<img className="createworkservicecard__field-link-arrow" src={Arrow} alt="" />
 						</div>
 					</a>
@@ -160,8 +114,8 @@ const CreateWorkServiceCard = ({startInsertJob}) => {
 					>
 						<div className="createworkservicecard__field-link-container">
 							<div>
-								<button className="btn btn-outline-info createworkservicecard__field-link-btn">
-									Koki <img className="btn-logo" src={CheffHat} />
+								<button className="createworkservicecard__field-link-btn">
+									Koki <img className="createworkservicecard__field-link-btn-logo" src={CheffHat} />
 								</button>
 							</div>
 							<img className="createworkservicecard__field-link-arrow" src={Arrow} alt="" />
@@ -183,7 +137,9 @@ const CreateWorkServiceCard = ({startInsertJob}) => {
 						className="createworkservicecard__field-link"
 					>
 						<div className="createworkservicecard__field-link-container">
-							<p className="createworkservicecard__field-link-txt">{salary} - {discount} </p>
+							<p className="createworkservicecard__field-link-txt">
+								{data.salary} - {data.discount}{' '}
+							</p>
 							<img className="createworkservicecard__field-link-arrow" src={Arrow} alt="" />
 						</div>
 					</a>
@@ -202,16 +158,33 @@ const CreateWorkServiceCard = ({startInsertJob}) => {
 					<NoProfileCard />
 				</div>
 			</div>
-			<div className="createworkservice__btn--container">
-                    <button type="submit" onClick={handleSubmit} className="createworkservice__btn">Post Work</button>
-            </div>
 		</div>
-		
 	);
 };
 
 const mapDispatchToProps = (dispatch) => ({
-	startInsertJob: (serviceName,start_time_range,finish_time_range,workcategory,salary,discount,serviceDescription,job_image) => dispatch(startInsertJob({serviceName,start_time_range,finish_time_range,workcategory,salary,discount,serviceDescription,job_image}))
-})
+	startInsertJob: (
+		serviceName,
+		start_time_range,
+		finish_time_range,
+		workcategory,
+		salary,
+		discount,
+		serviceDescription,
+		job_image
+	) =>
+		dispatch(
+			startInsertJob({
+				serviceName,
+				start_time_range,
+				finish_time_range,
+				workcategory,
+				salary,
+				discount,
+				serviceDescription,
+				job_image
+			})
+		)
+});
 
-export default connect(null,mapDispatchToProps)(CreateWorkServiceCard);
+export default connect(null, mapDispatchToProps)(CreateWorkServiceCard);
