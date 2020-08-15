@@ -69,7 +69,7 @@ const InputProfileLanguagesModal = ({ show, handleChange, handleClose, startInse
 					onClick={setCountIncrement}
 					className="inputprofilelanguagesmodal__addrow"
 				>
-					<img src={AddBtn} className="inputprofilelanguagesmodal__addrow-icon" /> Tambah Baris
+					<img src={AddBtn} className="inputprofilelanguagesmodal__addrow-icon" /> add row
 				</a>
 
 				<div className="inputprofilelanguagesmodal__btn-container">

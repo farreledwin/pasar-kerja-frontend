@@ -39,7 +39,7 @@ const InputProfileSertificateModal = ({ show, handleChange, handleClose, startIn
 			<div className="inputprofilesertificatemodal">
 				<h4 className="inputprofilesertificatemodal__title">Upload work related photo and certificates </h4>
 
-				<label for="">Galeri dan sertifikat</label>
+				<label for="">Galery and sertificates</label>
 					<div className="form-row">
 						<div className="form-group col-md-4">
 							<div className="inputprofilesertificatemodal__img-container" style={{ backgroundImage: `url(${gallery})` }}>

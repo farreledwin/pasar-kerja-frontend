@@ -23,7 +23,7 @@ const PaymentCard = ({data}) => {
 
                 <div className="paymentcard__detail">
                     <div className="paymentcard__payment">
-                        <h5 className="paymentcard__payment--text">Total Pembayaran</h5>
+                        <h5 className="paymentcard__payment--text">Total Payment</h5>
                         <h6 className="paymentcard__payment--total">Rp.{data.total_price}  </h6>
                     </div>
 

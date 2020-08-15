@@ -9,17 +9,17 @@ const PopularJob = () => (
 		<div className="popular-job__section">
 			<div className="popular-job__photo">
 				<img src={Beautiful} alt="..." class="" />
-				<p>10 pekerja</p>
+				<p>10 Worker</p>
 				<span>Education</span>
 			</div>
 			<div className="popular-job__photo">
 				<img src={Beautiful} alt="..." class="" />
-				<p>15 pekerja</p>
+				<p>15 Worker</p>
 				<span>Beauty Services</span>
 			</div>
 			<div className="popular-job__photo">
 				<img src={Chef} alt="..." class="" />
-				<p>12 pekerja</p>
+				<p>12 Worker</p>
 				<span>Food & Beverages</span>
 			</div>
 		</div>

@@ -21,7 +21,7 @@ class WorkServiceCard extends React.Component {
 
                     <div className="workservicecard__desc-detail">
                         <h6 className="workservicecard__desc-detail--title">Barista</h6>
-                        <h4 className="workservicecard__desc-detail--salary">Rp.500.000 per hari</h4>
+                        <h4 className="workservicecard__desc-detail--salary">Rp.500.000 per days</h4>
                         <p className="workservicecard__desc-detail--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus.</p>
                         <div className="workservicecard__desc-detail-footer">
                             <div className="workservicecard__desc-detail-footer--rating">
@@ -38,8 +38,8 @@ class WorkServiceCard extends React.Component {
                     </div>
                 </div>
 
-                <a className="workservicecard__cancel-link" href="">Hapus Iklan</a>
-                <a className="workservicecard__nonactive-link" href="">Non-aktifkan Iklan</a>
+                <a className="workservicecard__cancel-link" href="">Delete Ads</a>
+                <a className="workservicecard__nonactive-link" href="">Non-aktifkan Ads</a>
            </div>
         );
     }

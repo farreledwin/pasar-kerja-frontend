@@ -115,7 +115,7 @@ class ProfileCard extends React.Component {
                         <div className="profilecard__achievement-list">
                             <div className="profilecard__achievement-item">
                                 <h6 className="profilecard__achievement-name">
-                                    Sertifikat Barista
+                                    Barista Sertification
                                 </h6>
 
                                 <a href="" className="profilecard__achievement-certification-link">Lihat</a>
@@ -125,7 +125,7 @@ class ProfileCard extends React.Component {
 
                             <div className="profilecard__achievement-item">
                                 <h6 className="profilecard__achievement-name">
-                                    Sertifikat Kasir
+                                    Cashier Sertification
                                 </h6>
 
                                 <a href="" className="profilecard__achievement-certification-link">Lihat</a>
@@ -149,7 +149,7 @@ class ProfileCard extends React.Component {
 
                             <div className="profilecard__achievement-item">
                                 <h6 className="profilecard__achievement-name">
-                                    Inggris
+                                    English
                                 </h6>
 
                                 <p className="profilecard__achievement-languages-status">Lancar Bingit</p>
@@ -162,7 +162,7 @@ class ProfileCard extends React.Component {
                 
 
                 <div className="profilecard__link-container">
-                    <a className="profilecard__link" href="">Kunjungi Profil</a>
+                    <a className="profilecard__link" href="">Visit Profile</a>
                 </div>
             </div>
         );

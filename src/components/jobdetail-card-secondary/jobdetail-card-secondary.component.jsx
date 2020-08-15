@@ -82,7 +82,7 @@ const JobDetailCardSecondary = (props) => {
 						className="form-control jobdetail--card-secondary__note-form"
 						onChange={onValueChange}
 						name="note"
-						placeholder="Isi di sini..."
+						placeholder="text here..."
 					/>
 				</div>
 			</div>

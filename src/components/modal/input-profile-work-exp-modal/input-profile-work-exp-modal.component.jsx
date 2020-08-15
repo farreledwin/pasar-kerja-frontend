@@ -12,7 +12,7 @@ const InputProfileWorkExpModal = ({ show, handleChange, handleClose }) => {
 
                 <form className="inputprofileworkexpmodal__field-container">
                         <div className="form-group">
-                          <label for="">Pengalaman Kerja</label>
+                          <label for="">Work Experiences</label>
                           <textarea className="form-control" onChange={handleChange} name="work_exp" placeholder="Cth: Pengalaman kerja yang pernah anda lakukan"></textarea>
                         </div>
                 </form>

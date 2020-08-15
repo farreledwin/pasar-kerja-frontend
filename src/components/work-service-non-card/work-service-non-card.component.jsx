@@ -7,8 +7,8 @@ const WorkServiceNonCard = () => {
 		<div className="workservicenoncard">
 			<img src={Honk} className="workservicenoncard__img" />
 			<div className="workservicenoncard__text">
-				<p>Pasang iklan pekerjaan anda dan</p>
-				<p>jangan lupa untuk melengkapi profil mu</p>
+				<p>Put ads for your services and</p>
+				<p>dont forget to complete your profile</p>
 			</div>
 
 			<div className="workservicenoncard__button-container">

@@ -11,9 +11,9 @@ const ServiceCategoryModal = ({show,handleClose}) => {
                 <h4 className="servicecategorymodal__title">Select the best category to describe your service</h4>
 
                     <form className="servicecategorymodal__field-container">
-                        <label for="">Kategori Jasa</label>
+                        <label for="">Service Category</label>
                              <select className="form-control" id="">
-                                <option hidden>Kategori Jasa</option>
+                                <option hidden>Service Category</option>
                             </select>
                     </form>
 

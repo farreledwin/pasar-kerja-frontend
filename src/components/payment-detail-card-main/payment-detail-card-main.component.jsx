@@ -84,7 +84,7 @@ const PaymentDetailCardMain = (props) => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
 							luctus.Lorem ipsum dolor sit amet, consectetur{' '}
 						</p>
-						<a href="">Pelajari</a>
+						<a href="">Learn more</a>
 					</div>
 				</div>
 

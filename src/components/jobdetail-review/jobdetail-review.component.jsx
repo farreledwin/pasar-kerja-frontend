@@ -16,13 +16,13 @@ const JobDetailReview = (props) => {
 						{Array.from({ length: jobRating }).map(() => (
 							<img className="jobdetail-review__title--rating-active" src={RatingActive} />
 						))}
-						<p>({props.job.job_review}) Ulasan</p>
+						<p>({props.job.job_review}) reviewer</p>
 					</div>
 				</div>
 				<div>
 					<h6>
 						<a href="" className="jobdetail-review__title--link">
-							Lihat semua
+							See all
 						</a>
 					</h6>
 				</div>

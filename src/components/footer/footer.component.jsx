@@ -27,7 +27,7 @@ const Footer = () => (
 				</div>
 				<div className="footer__follow">
 					<div className="footer__follow--text">
-						<p>iFollow us on</p>
+						<p>Follow us on</p>
 					</div>
 					<div className="footer__follow--icon">
 						<img src={TwitterBlack} />

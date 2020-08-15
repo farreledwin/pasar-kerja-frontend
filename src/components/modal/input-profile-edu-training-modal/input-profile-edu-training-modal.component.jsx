@@ -40,7 +40,7 @@ const InputProfileEduTrainingModal = ({ show, handleChange, handleClose,startIns
 		<Modal show={show} className="modal-font modal-change-padding-about" onHide={handleClose}>
 			<div className="inputprofileedutrainingmodal">
 				<h4 className="inputprofileedutrainingmodal__title">Tell us your education & Training</h4>
-				<label for="">Edukasi dan pelatihan</label>
+				<label for="">Edukasi & Training</label>
 				{Array.from({ length: countRow }).map(() => (
 					<div className="form-row">
 						<div className="form-group col-md-6">
@@ -75,7 +75,7 @@ const InputProfileEduTrainingModal = ({ show, handleChange, handleClose,startIns
 					onClick={setCountIncrement}
 					className="inputprofileedutrainingmodal__addrow"
 				>
-					<img src={AddBtn} className="inputprofileedutrainingmodal__addrow-icon" /> Tambah Baris
+					<img src={AddBtn} className="inputprofileedutrainingmodal__addrow-icon" /> add row
 				</a>
 
 				<div className="inputprofileedutrainingmodal__btn-container">

@@ -44,7 +44,7 @@ const JobDetailCardMain = (props) => {
 
                     <div className="jobdetail--card-main__description">
                         <div className="jobdetail--card-main__description-container">
-                            <h3>Deskripsi Jasa</h3>
+                            <h3>Service Description</h3>
                             <p>{props.job.job_description}
                             </p>
                         </div>

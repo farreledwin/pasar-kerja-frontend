@@ -22,12 +22,12 @@ const ProfileCardMini = (props) => {
 				</div>
 
 				<div className="profile-card__description-container">
-					<h5 className="profile-card__description-title">Tentang Saya</h5>
+					<h5 className="profile-card__description-title">About Me</h5>
 					<p className="profile-card__description-text">{props.job.people_about}</p>
 				</div>
 
 				<div className="profile-card__description-container">
-					<h5 className="profile-card__description-title">Pengalaman</h5>
+					<h5 className="profile-card__description-title">Experience</h5>
 					<p className="profile-card__description-text">{props.job.people_experience}</p>
 				</div>
 

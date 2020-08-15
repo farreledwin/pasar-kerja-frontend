@@ -23,7 +23,7 @@ const HomePage = ({ startFetchJobCategory }) => {
 				</div>
 			</div>
 			<div className="content-after-header__section">
-				<h3>Kategori jasa yang kita sediakan</h3>
+				<h3>Worker Categories</h3>
 				<GalleryCategoryHome />
 			</div>
 		</div>
