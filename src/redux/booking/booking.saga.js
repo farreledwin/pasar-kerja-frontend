@@ -6,7 +6,7 @@ import { takeLatest, put, all, call } from 'redux-saga/effects';
 
 import { BookingTypes } from './booking.types';
 
-import { successFetchBooking } from './booking.action';
+import { successFetchBooking,successFetchWorkOrder } from './booking.action';
 
 export function* successGetAllBooking(response) {
     const data = yield getDataFromResponse(response);
@@ -19,11 +19,26 @@ export function* fetchAllBooking({payload: {email}}) {
 	yield successGetAllBooking(response);
 }
 
+export function* successGetAllWorkOrder(res) {
+    const data = yield getDataFromResponse(res);
+
+    yield put(successFetchWorkOrder(data));
+}
+
+export function* fetchAllWorkOrder({payload: {email}}) {
+    const response = yield getFetchInstance().post('showAllWorkOrder',{email});
+    yield successGetAllWorkOrder(response);
+}
+
 export function* onBookingStart() {
     yield takeLatest(BookingTypes.START_FETCH_ALL_BOOKING,fetchAllBooking);
 }
 
+export function* onFetchWorkOrderStart() {
+    yield takeLatest(BookingTypes.START_FETCH_ALL_WORKORDER,fetchAllWorkOrder);
+}
+
 
 export function* bookingSagas() {
-	yield all([ call(onBookingStart) ]);
+	yield all([ call(onBookingStart),call(onFetchWorkOrderStart) ]);
 }

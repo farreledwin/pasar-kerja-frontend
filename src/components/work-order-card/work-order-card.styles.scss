@@ -1,0 +1,252 @@
+.workordercard{
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: -1px 0px 56px -7px rgba(189,189,189,1);
+
+    &__status{
+        display: flex;
+        justify-content: flex-end;
+
+        h5{
+            background-color: #C8D1D9;
+            border-radius: 0 1em 0 0;
+            padding: .5em 1em .5em 1em;
+            font-size: 16px;
+            color:#1A3E60;
+            font-weight: 700;
+        }
+    }
+
+    &__btn{
+        border-radius: .8em;
+        border: 1px solid #1A3E60;
+        color: #1A3E60;
+        background-color: white;
+        padding: 0 9px;
+        margin: 5px 0;
+        &-text{
+            font-size: 12px;
+        }
+
+        &-logo{
+            width:30px;
+            height: 30px;
+        }
+    }
+
+    &__detail{
+
+        padding: 0 8%;
+        &-info{
+            
+            &-img{
+                width:100%;
+                border-radius: 10px 10px 0 0;
+            }
+             &-title{
+
+            &__date{
+            border: 1px solid #909090;
+            border-radius: 10px;
+            margin: 35px 0 0 0 ;
+
+            &--form{
+                border: none;
+                width: 150px;
+                
+                :focus-within{
+                    border: none !important;
+                }
+
+                &:active{
+                    border: none !important;
+                }
+            }
+
+            &--text{
+                margin: auto 0;
+
+                &-2{
+                    margin: auto 0;
+                }
+            }
+
+            &-container{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 20px;
+                margin: 10px 0 10px 0 ;
+            }
+
+            .basic-line{
+                margin: 1px;
+            }
+
+            .bold{
+                font-weight: 600;
+            }
+        }
+
+        &__note{
+            margin: 35px 0 20px 0 ;
+            .bold{
+                font-weight: 600;
+            }
+
+            &-container{
+                border: 1px solid #909090;
+                border-radius: 10px;
+                padding: 5px 20px;
+
+
+                .note-paragraph{
+                    color: #808080;
+                    font-weight: lighter;
+                }
+            }
+        }
+        }  
+
+        &-date{
+            border: 1px solid #909090;
+            border-radius: 10px;
+            margin: 35px 0 0 0 ;
+
+            &--text{
+                margin: auto 0;
+
+                &-2{
+                    margin: auto 0;
+                }
+            }
+
+            &-container{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 20px;
+                margin: 10px 0 10px 0 ;
+            }
+
+            .basic-line{
+                margin: 1px;
+            }
+
+            .bold{
+                font-weight: 600;
+            }
+        }
+
+        &__note{
+            margin: 35px 0 20px 0 ;
+            .bold{
+                font-weight: 600;
+            }
+
+            &-container{
+                border: 1px solid #909090;
+                border-radius: 10px;
+                padding: 5px 20px;
+
+
+                .note-paragraph{
+                    color: #808080;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+
+
+    }
+
+    &__price{
+        &-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bold{
+            font-weight: 600;
+        }
+    }
+
+    &__button{
+        &-container{
+            padding: 5% 20%;
+        }
+
+        &-main{
+            &-decline{
+                width: 100%;
+                border: 1px solid #ED4C5C;
+                background-color: white;
+                color: #ED4C5C;
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 10px 0px;
+            }
+    
+            &-accept{
+                width: 100%;
+                border: 1px solid #3182CB;
+                background-color: #3182CB;
+                color: white;
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 10px 0px;
+            }
+        }
+
+        &-secondary{
+            width: 100%;
+            display: flex;
+            &-declined{
+                width: 100%;
+                border: 1px solid #ED4C5C;
+                background-color: #ED4C5C;
+                color: white;
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 15px 0px;
+            }
+
+            &-wip{
+                width: 100%;
+                border: 1px solid #76C16A;
+                background-color: #76C16A;
+                color: white;
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 15px 0px;
+            }
+
+            &-accepted{
+                width: 100%;
+                border: 1px solid #3182CB;
+                background-color: #3182CB;
+                color: white;
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 15px 0px;
+            }
+
+            &-done{
+                width: 100%;
+                border: 1px solid #1A3E60;
+                background-color: #1A3E60;
+                color: white;
+                font-weight: 700;
+                border-radius: 8px;
+                padding: 15px 0px;
+            }
+        }
+    }
+}
+
+.pad-5{
+    padding:0px 10px;
+}
+
+.text-warp{
+    word-wrap: normal;
+}

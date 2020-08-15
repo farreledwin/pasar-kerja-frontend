@@ -1,7 +1,10 @@
-import { BookingTypes } from './booking.types';
+import {
+	BookingTypes
+} from './booking.types';
 
 const INITIAL_STATE = {
-	customerBooking: null
+	customerBooking: null,
+	allworkorder: []
 };
 
 const BookingReducer = (state = INITIAL_STATE, action) => {
@@ -11,8 +14,13 @@ const BookingReducer = (state = INITIAL_STATE, action) => {
 				...state,
 				customerBooking: action.payload
 			};
-		default:
-			return state;
+		case BookingTypes.SUCCESS_FETCH_ALL_WORKORDER:
+			return {
+				...state,
+				allworkorder: action.payload
+			}
+			default:
+				return state;
 	}
 };
 
