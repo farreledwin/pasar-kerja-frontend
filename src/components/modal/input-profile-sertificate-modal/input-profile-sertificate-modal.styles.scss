@@ -1,0 +1,70 @@
+.inputprofilesertificatemodal{
+    box-shadow: -1px 0px 56px -7px rgba(189,189,189,1);
+    padding: 25px;
+    border-radius: 15px;
+
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    &__img{
+        &-container{
+            width: 100%;
+            height: 150px;
+                background-color: rgba(111, 174, 232, 0.1);
+                border: 1px dashed #3183CD;
+                border-radius: 15px;
+                padding: 10px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+        }
+
+        &-btn{
+            display: none;
+        }
+    }
+
+    &__field{
+        &-container{
+            margin: 20px 0px;
+        }
+        .form-group{
+            label{
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__btn{
+        padding: 8px 20px;
+        border-radius: 10px;
+        margin: 0 0 0 10px;
+        &-container{
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        &-save{
+            background-color: #3183CD;
+            color: white;
+            border: none;
+        }
+
+        &-back{
+            background-color: white;
+            border: none;
+            color: #3183CD;
+        }
+    }
+
+    &__addrow{
+        &-icon{
+            width:24px;
+            height: 24px;
+        }
+    }
+}

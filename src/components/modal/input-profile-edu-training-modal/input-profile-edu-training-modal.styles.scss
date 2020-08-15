@@ -1,0 +1,66 @@
+.inputprofileedutrainingmodal{
+    box-shadow: -1px 0px 56px -7px rgba(189,189,189,1);
+    padding: 25px;
+    border-radius: 15px;
+
+    .year-picker {
+        height:38px;
+
+        .picker-panel {
+            z-index: 9999;
+            top: 5em !important;
+        }
+        
+       
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    &__field{
+        &-container{
+            margin: 20px 0px;
+        }
+        .form-group{
+            label{
+                font-weight: 500;
+            }
+
+            
+        }
+    }
+
+
+    &__btn{
+        padding: 8px 20px;
+        border-radius: 10px;
+        margin: 0 0 0 10px;
+        &-container{
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        &-save{
+            background-color: #3183CD;
+            color: white;
+            border: none;
+        }
+
+        &-back{
+            background-color: white;
+            border: none;
+            color: #3183CD;
+        }
+    }
+
+    &__addrow{
+        &-icon{
+            width:24px;
+            height: 24px;
+        }
+    }
+}

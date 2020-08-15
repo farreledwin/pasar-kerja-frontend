@@ -1,0 +1,3 @@
+export const GalleryCertifTypes = {
+    START_INSERT_GALLERY_CERTIF: 'START_INSERT_GALLERY_CERTIF'
+};

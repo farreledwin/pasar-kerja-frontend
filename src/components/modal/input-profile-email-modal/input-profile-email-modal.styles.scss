@@ -1,0 +1,81 @@
+.inputprofileemailmodal{
+    box-shadow: -1px 0px 56px -7px rgba(189,189,189,1);
+    padding: 25px;
+    border-radius: 15px;
+
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+
+        &-2{
+            font-size: 12px;
+            margin: auto 0;
+            padding-left: 10px;
+        }
+    }
+    &__field{
+        &-container{
+            margin: 20px 0px;
+            padding: 1px;
+        }
+        .form-group{
+            label{
+                font-weight: 500;
+            }
+        }
+
+        &-placeholder{
+            pointer-events: none;
+            position: absolute;
+            top:5px;
+            bottom:0;
+            height: 25px;
+            font-size: 25px;
+            left: 10px;
+            margin: auto;
+            color: #ccc;
+            font-size: 14px;
+            display: flex;
+
+            &-txt-2{
+                position: absolute;
+                left: 460%;
+            }
+            &-container{
+                position: relative;
+
+                & input:focus + .inputprofileemailmodal__field-placeholder{
+                   display: none;
+                }
+            }
+        }
+    }
+
+    &__btn{
+        padding: 8px 20px;
+        border-radius: 10px;
+        margin: 0 0 0 10px;
+        &-container{
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        &-save{
+            background-color: #3183CD;
+            color: white;
+            border: none;
+        }
+
+        &-back{
+            background-color: white;
+            border: none;
+            color: #3183CD;
+        }
+    }
+}
