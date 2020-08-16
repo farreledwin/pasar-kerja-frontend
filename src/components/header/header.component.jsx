@@ -20,25 +20,29 @@ const Header = ({ hidden, hiddenRegister, setToggleRegisterDropDown, setToogleDr
 			<div className="header__menu">
 				<ul className="header__menu-list">
 					<li>
-						<a href="#">Cari Kerja</a>
+						<a href="#">Find worker</a>
 					</li>
 					<li>
-						<a href="#">Pasang Iklan</a>
+						<a href="#">Be a worker</a>
 					</li>
 					<li>
-						{userData.length !== 0 ? <a>Pesanan</a> : <a onClick={setToggleRegisterDropDown}>Daftar</a>}
+						{userData.length !== 0 ? (
+							<a>Work Orders</a>
+						) : (
+							<a onClick={setToggleRegisterDropDown}>Register</a>
+						)}
 					</li>
 					{hiddenRegister === true ? <FormMasterRegister /> : null}
 					{userData.length !== 0 ? null : (
 						<li>
-							<a onClick={setToogleDropDown}>Masuk</a>
+							<a onClick={setToogleDropDown}>Login</a>
 						</li>
 					)}
 					{userData.length !== 0 ? (
 						<div>
 							<li>
 								<a>
-									Profil<span
+									Profile<span
 										className="dot"
 										style={{ backgroundImage: `url(${userData.user_image})` }}
 									/>

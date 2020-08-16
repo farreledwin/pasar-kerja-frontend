@@ -264,7 +264,7 @@ const CreateProfileCard = ({
 
 			<div className="createprofilecard__field">
 				<h5 className="createprofilecard__field-text">Languages</h5>
-				<a href="javascript:void(0)" onClick={handleLanguageShow} className="createprofilecard__field-link">
+				<a href="javascript:void(0)" onClick={handleLanguageShow} className=	"createprofilecard__field-link">
 					<div className="createprofilecard__field-link-container">
 						<div className="createprofilecard__field-link-container-language">
 							{language.length !== 0 ? (

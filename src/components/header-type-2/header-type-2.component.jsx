@@ -15,7 +15,8 @@ const displayModify = {
 };
 const HeaderType2 = () => (
 	<div className="header__logo">
-		<Link to="/"><img src={Logo} />
+		<Link to="/">
+			<img src={Logo} />
 		</Link>
 		<div className="header__searchbar">
 			<div className="header__searchbar__inputjob">
@@ -24,7 +25,7 @@ const HeaderType2 = () => (
 						type="text"
 						style={borderWhatJobStyle}
 						className="form-control padding-add"
-						placeholder="&#xf002;   Cari tipe pekerjaan"
+						placeholder="&#xf002;  Find workers category"
 					/>
 				</div>
 				<div className="form-group" style={displayModify}>
@@ -32,7 +33,7 @@ const HeaderType2 = () => (
 						type="text"
 						style={borderWhereJobStyle}
 						className="form-control padding-add"
-						placeholder="&#xf3c5;   Cari lokasi?"
+						placeholder="&#xf3c5;  Find location"
 					/>
 					<div className="form-group background-change">
 						<a href="">
